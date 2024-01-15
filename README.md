@@ -11,7 +11,7 @@
 ### Este projeto é a criação do Front-End de um site para uma Academia fictícia.
 
 <p> 
-    <img width="1000" height="600" src="src/gif1.gif" >
+    <img width="1000" height="600" src="src/home1.mp4" >
 </p>
 
 ### Para o desenvolvimento desse projeto foram desenvolvidas diversas habilidades com HTML e CSS.
