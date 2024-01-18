@@ -203,14 +203,14 @@ html {
 }
 
 .itens-horario {
-  width: 80%;
+  width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 .itens-horario .card {
