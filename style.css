@@ -207,32 +207,42 @@ html {
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 
-.itens-horario div {
+.itens-horario .card {
+  width: 400px;
+  height: 400px;
   background-color: #5e5252;
+  background-image: url("./img/logo.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   box-shadow: 0px 0px 4px 1px;
   border-radius: 2rem;
-  transition: all 300ms ease-in;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
-/*ver efeito ainda*/
-.itens-horario div:hover {
-  background-color: rgba(191, 27, 44, 0.5);
-}
-
-.itens-horario .info {
+.itens-horario .card .info {
+  width: 100%;
+  height: 100%;
   background-color: rgb(221, 221, 221);
   border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+}
+
+.itens-horario .card .info:hover {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .itens-horario .info h3 {
@@ -288,6 +298,22 @@ html {
   color: #bf1b2c;
   border: 1px solid #bf1b2c;
 }
+
+/*teste*/
+
+/* .info {
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.card:hover .info {
+  transform: translateY(0);
+} */
 
 footer {
   width: 100%;
