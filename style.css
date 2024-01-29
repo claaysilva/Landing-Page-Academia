@@ -289,7 +289,7 @@ header {
 .itens-horario .info .agendar {
   width: 200px;
   height: 35px;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   color: white;
   background-color: #bf1b2c;
   border-radius: 5px;
@@ -331,7 +331,7 @@ header {
 
 .servico h2 {
   font-size: 5rem;
-  color: #c2c2c2;
+  color: #fff;
   text-transform: uppercase;
   font-family: "Teko", sans-serif;
   background-color: #1f1e1f;
