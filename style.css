@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@400;&display=swap");
+
 /*resetar o css*/
 * {
   margin: 0;
@@ -19,6 +21,10 @@ html {
 }
 
 /*menu*/
+
+header {
+  z-index: 2;
+}
 
 .content {
   width: 100vw;
@@ -75,7 +81,7 @@ html {
 
 /*primeira seção*/
 
-.first-section {
+.home {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(
@@ -93,7 +99,7 @@ html {
   align-items: center;
 }
 
-.first-section .content-main {
+.home .content-main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,14 +107,14 @@ html {
   margin-top: 10rem;
 }
 
-.first-section h1 {
+.home h1 {
   color: #fff;
   font-size: 5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
-.first-section h2 {
+.home h2 {
   color: rgb(177, 177, 177);
   font-size: 3rem;
   font-weight: 400;
@@ -166,19 +172,19 @@ html {
   justify-content: space-between;
 }
 
-.contentsobre {
+.content-sobre {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.contentsobre h2 {
+.content-sobre h2 {
   font-size: 6rem;
   margin-bottom: 1rem;
 }
 
-.contentsobre p {
+.content-sobre p {
   text-align: center;
   font-size: 1.8rem;
   width: 600px;
@@ -193,13 +199,14 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(12, 12, 12, 0.8);
+  background-image: linear-gradient(to right, #3c3c3c, #8c8c8c, #3c3c3c);
 }
 
 .horario h2 {
   font-size: 5rem;
-  color: #e6e6e6;
+  color: #c2c2c2;
   text-transform: uppercase;
+  font-family: "Teko", sans-serif;
 }
 
 .itens-horario {
@@ -216,8 +223,6 @@ html {
 .itens-horario .card {
   width: 400px;
   height: 400px;
-  background-color: #5e5252;
-  background-image: url("./img/logo.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -315,10 +320,73 @@ html {
   transform: translateY(0);
 } */
 
+/*servicos*/
+
+.servico .container {
+  display: flex;
+  width: 100vw;
+  background-color: #1f1e1f;
+  padding: 0.5rem 3rem 2rem 1rem;
+}
+
+.servico h2 {
+  font-size: 5rem;
+  color: #c2c2c2;
+  text-transform: uppercase;
+  font-family: "Teko", sans-serif;
+  background-color: #1f1e1f;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 6rem;
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+/*footer*/
+
 footer {
   width: 100%;
-  background-color: #1f1e1f;
-  padding: 0 20px;
+  background-image: linear-gradient(to right, #3c3c3c, #8c8c8c, #3c3c3c);
   font-size: 1.8rem;
   color: white;
 }
@@ -326,7 +394,6 @@ footer {
 .footer-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,8 +407,8 @@ footer {
 }
 
 .footer-section-title {
-  margin: 0 0 25px;
   font-size: 2.5rem;
+  padding-top: 2rem;
 }
 
 .footer-section-rede-social {
@@ -350,6 +417,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   font-size: 3rem;
+  padding: 2rem 0;
 }
 
 .footer-section-rede-social li a {
@@ -359,6 +427,10 @@ footer {
 
 .footer-section-rede-social li a:hover {
   color: #bf1b2c;
+}
+
+.footer-section-address {
+  padding: 2rem 0;
 }
 
 .footer-section-address p {
